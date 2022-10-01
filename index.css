@@ -1,0 +1,51 @@
+:root {
+    /* :root is a clever way of saying "the outer-most element" */
+    
+    --color1-color: red; /* the default */
+    --color2-color: yellow;
+  }
+body{
+    font-family: 'Comfortaa', cursive;
+    background-image: linear-gradient(to left, var(--color1-color), var(--color2-color));
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.hex_color{
+    text-align: center;
+    justify-content: center;
+}
+.hex_color h1{
+    margin: 0% 0% 10% 0%;
+    animation: colorchange 2s infinite alternate;
+    animation-timing-function: linear;
+}
+.hex_color h2{
+    animation: colorchange 2s infinite alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes colorchange {
+    0%{
+        color: #FFFFFF;
+    }
+    20%{
+        color: #CDCDCD;
+    }
+    40%{
+        color: #A2A2A2 ;
+    }
+    60%{
+        color: #6D6D6D ;
+    }
+    80%{
+        color:#3B3B3B  ;
+    }
+    100%{
+        color: black;
+    }
+}
