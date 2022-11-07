@@ -1,18 +1,22 @@
 :root {
     /* :root is a clever way of saying "the outer-most element" */
     
-    --color1-color: red; /* the default */
-    --color2-color: yellow;
+    --color1-color: yellow; /* the default */
+    --color2-color: red;
   }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     font-family: 'Comfortaa', cursive;
-    background-image: linear-gradient(to left, var(--color1-color), var(--color2-color));
+    background-image: linear-gradient(to right, var(--color1-color), var(--color2-color));
 }
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .hex_color{
@@ -20,13 +24,68 @@ body{
     justify-content: center;
 }
 .hex_color h1{
-    margin: 0% 0% 10% 0%;
+    margin: 30px 0% 10% 0%;
     animation: colorchange 2s infinite alternate;
     animation-timing-function: linear;
 }
 .hex_color h2{
+    margin: 0% 0% 0% 0%;
     animation: colorchange 2s infinite alternate;
     animation-timing-function: linear;
+}
+button{
+    margin: 5% 0% 0% 0%;
+}
+.INPUT{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+.CONTAINER{
+    position: relative;
+    display: flex;
+    background: white;
+    justify-content: space-between;
+    transition: 0.75s;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 25 35 rgb(0,0,0,0.1);
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.CONTAINER.active{
+    width: 360px;
+    border-radius: 50px;
+}
+
+.CONTAINER .search{
+    position: relative;
+    display: flex;
+    min-width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.CONTAINER .searchInput{
+    /* display: flex; */
+    position: absolute;
+    left: 60px;
+    height: 100%;
+    width: calc(100% - 60px);
+    line-height: 60px;
+}
+.CONTAINER .searchInput input{
+    height: 100%;
+    width: 90%;
+    border-radius: 0 50px 50px 0 ;
+    border: none;
+    outline: none;
+    font-size: 1.25em;
 }
 
 @keyframes colorchange {
