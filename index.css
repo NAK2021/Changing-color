@@ -48,7 +48,7 @@ button{
     display: flex;
     background: white;
     justify-content: space-between;
-    transition: 0.75s;
+    transition: 0.5s;
     overflow: hidden;
     width: 60px;
     height: 60px;
