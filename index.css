@@ -60,7 +60,12 @@ button{
     width: 360px;
     border-radius: 50px;
 }
-
+@media (min-weight: 360px)  {
+    .CONTAINER.active{
+        width: 260px;
+        border-radius: 50px;
+    }
+}
 .CONTAINER .search{
     position: relative;
     display: flex;
